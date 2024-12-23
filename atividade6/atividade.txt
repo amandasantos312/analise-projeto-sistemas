@@ -1,0 +1,10 @@
+Modelar, a nível de Diagrama de Classe, os seguintes sistemas:
+Atividade 1: Sistema de Reservas de Hotel
+O sistema deve permitir o cadastro de hóspedes, quartos e as reservas feitas pelos hóspedes.
+
+Cada quarto possui um número e uma categoria (simples, duplo, suíte). O hóspede pode fazer uma reserva para um quarto por um período de tempo, e cada reserva está associada a um pagamento.
+
+Atividade 2: Sistema de Cadastro de Produtos em Estoque
+O sistema deve gerenciar produtos, fornecedores e os lotes de produtos recebidos.
+
+Cada produto possui informações como nome, código e preço. Os fornecedores fornecem possuem nome, CNPJ e endereço e fornecem produtos ao armazém. Cada produto pode ser recebido em múltiplos lotes, os quais têm quantidade e data de recebimento.
