@@ -1,0 +1,37 @@
+@startuml empresaUml
+
+class Funcionario {
+    + id: Integer
+    + nome: String
+    + cpf: String
+    + cargo: String 
+    + salario: Float
+
+    + getId(): Integer
+    + getNome(): String
+    + getSalario(): Float
+} 
+
+class Gerente  {
+    + id: Integer
+    + salario: Float
+
+    + getId(): Integer
+    + getSalario(): float
+}
+
+class Departamento {
+    + id: Integer
+    + id_gerente: Integer
+
+    + getId(): Integer
+    + getIdGerente(): Integer
+}
+
+Funcionario --> Gerente: (1...N)
+Gerente --> Funcionario: (1...1)
+
+Gerente --> Departamento: (1...1)
+Departamento --> Gerente: (1...1)
+
+@enduml

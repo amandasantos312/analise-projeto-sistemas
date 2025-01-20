@@ -1,0 +1,52 @@
+@startuml estacionamentoUml
+
+class Estacionamento {
+    + id: Integer
+    + nome: String
+    + capacidade_max: Integer
+}
+
+class Vaga {
+    + id: Integer
+    + tipo: String
+    + id_cliente: String
+
+    + get_id(): Integer
+    + get_tipo(): String
+}
+
+class Cliente {
+    + id: Integer
+    + nome: String
+    + cpf: String
+
+    + get_id(): Integer
+    + get_placa(): String
+}
+
+class Registro {
+    + dt_entrada: Date
+    + dt_saida: Date
+    + placa_veiculo: String
+
+    + get_dt_entrada(): Date
+    + get_dt_saida(): Date
+}
+
+class Veiculo {
+    + chassi: String
+    + placa: String
+    + cor: String
+    + ano: Integer
+
+    + get_chassi(): String
+    + get_placa(): String
+}
+
+Estacionamento --> Vaga: (1...N)
+Vaga --> Cliente: (0...1)
+Cliente --> Veiculo: (1...N)
+Veiculo --> Registro: (0...N)
+Registro --> Vaga: (1...1)
+
+@enduml

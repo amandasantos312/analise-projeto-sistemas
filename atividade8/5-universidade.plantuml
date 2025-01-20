@@ -1,0 +1,47 @@
+@startuml universidadeUml
+
+class Curso {
+    + id: Integer
+    + nome: String
+
+    + get_id(): Integer
+}
+
+class Aluno {
+    + id: Integer
+    + nome: String
+    + matricula: String
+    + email: String
+    + dt_nasc: Date
+
+    + get_id(): Integer
+    + get_nome(): String
+    + get_matricula(): String
+}
+
+class Professor {
+    + id: Integer
+    + nome: String
+    + matricula: String
+
+    + get_id(): Integer
+    + get_matricula(): String
+}
+
+class Disciplina {
+    + id: Integer
+    + id_professor: Integer
+    + nome: String
+    + carga_horaria: Integer
+
+    + get_id(): Integer
+    + get_carga_horaria(): Integer
+}
+
+Curso --> Aluno: (1...N)
+Curso --> Professor: (1...1)
+Curso --> Disciplina: (1...N)
+Aluno --> Disciplina: (1...N)
+Professor --> Disciplina: (1...N)
+
+@enduml

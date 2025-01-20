@@ -1,0 +1,39 @@
+@startuml produtosUml
+
+class Cliente {
+    + id: Integer
+    + nome: String
+    + email: String
+    + telefone: String
+
+    + getId(): Integer
+    + getNome(): String
+}
+
+class Venda {
+    + id: Integer
+    + id_cliente: Integer
+    + total: Float
+    + dt_venda: Date
+    + status_pagamento: String
+
+    + getTotal(): Float
+    + getDataVenda(): Date
+}
+
+class Produto {
+    + id: Integer
+    + nome: Float
+    + preco: Float
+
+    + getId(): Integer
+    + getTotal(): Float
+}
+
+Cliente --> Venda: (1...N)
+Venda --> Cliente: (1...1)
+
+Venda --> Produto: (1...N)
+Produto --> Venda: (1...N)
+
+@enduml

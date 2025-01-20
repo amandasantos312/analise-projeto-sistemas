@@ -1,0 +1,56 @@
+@startuml restauranteUml
+
+class Cardapio {
+    + id: Integer
+    + nome: String
+    + itens: Item
+
+    + get_id(): Integer
+    + get_nome(): String
+    + get_itens(): Item
+}
+
+class Item {
+    + id: Integer
+    + nome: String
+    + preco: Float
+    + descricao: String
+
+    + get_id(): Integer
+    + get_preco(): Float
+}
+
+class ItemPedido {
+    + id: Integer
+    + qtd_item: Integer
+}
+
+class Pedido {
+    + id: Integer
+    + valor_total: Float
+    + dt_hora: Date
+    + descricao: String
+    + tipo_pag: String
+    + id_cliente: Integer
+
+    + get_id(): Integer
+    + get_valor_total(): Float
+    + get_tipo_pag(): String
+}
+
+class Cliente {
+    + id: Integer
+    + nome: String
+    + email: String
+    + telefone: String
+
+    + get_id(): Integer
+    + get_nome(): String
+}
+
+Cardapio --> Item: (1...N)
+Item -- ItemPedido
+Item --> Pedido: (1...N)
+Pedido --> Cliente: (1...1)
+
+@enduml
