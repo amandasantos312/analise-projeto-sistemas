@@ -1,0 +1,61 @@
+Exercício 1: Sistema de Cadastro de Funcionários
+
+Por meio do Diagrama de Classe, modelar um sistema de cadastro de funcionários para uma empresa. O sistema deve gerenciar
+diferentes tipos de funcionários (por exemplo, Funcionário e Gerente) e suas informações pessoais e profissionais.
+
+A empresa tem um departamento de RH que gerencia os funcionários. Cada funcionário possui um nome, CPF, cargo e salário. Além
+disso, os funcionários podem ser gerentes de equipes, e um gerente tem um departamento específico sob sua responsabilidade.
+
+Exercício 2: Sistema de Vendas de Produtos
+
+Elabore um diagrama de classe para um sistema de vendas de produtos. O sistema deve contemplar:
+Produtos que possuem nome, preço e código.
+Cada venda é realizada por um cliente e pode incluir vários produtos.
+Um cliente tem nome, e-mail e número de telefone.
+Cada venda tem um total, data da venda e status de pagamento (pago/não pago).
+Sabe-se que:
+Um Cliente pode realizar várias Vendas.
+Uma Venda pode incluir vários Produtos, através de uma classe associativa ItemVenda.
+A classe ItemVenda tem a quantidade de cada produto na venda.
+Exercício 3: Sistema de Gestão de Estacionamento
+
+Crie um diagrama de classe para um sistema de estacionamento. Considere os seguintes pontos:
+O estacionamento possui um nome e uma capacidade máxima.
+Cada vaga tem um número único e está associada a um tipo (por exemplo, vaga para carro, moto, etc.).
+O cliente utiliza o estacionamento e tem nome, CPF e placa do veículo.
+O estacionamento tem um registro de entrada e saída de veículos, com data e hora de cada evento.
+Um veículo pode ser estacionado em uma vaga por um tempo determinado.
+Considere que:
+Um Estacionamento pode ter várias Vagas.
+Um Veículo pode ser associado a vários Registros, mas um Registro está relacionado a apenas um Veículo e uma Vaga.
+Um Cliente pode ter vários Veículos.
+
+Exercício 4: Sistema de Gestão de Pedidos em um Restaurante
+
+Desenvolva um diagrama de classe para um sistema de gestão de pedidos em um restaurante.
+Considere os seguintes aspectos:
+O restaurante possui um cardápio com vários itens (por exemplo, pratos, bebidas).
+Cada item do cardápio tem um nome, preço e descrição.
+O cliente faz pedidos que podem incluir um ou mais itens do cardápio.
+Cada pedido tem um valor total, data e hora de realização.
+Um pedido pode ser pago de diferentes formas (cartão, dinheiro, etc.).
+Relação de Cardinalidade:
+O Cardápio contém vários Itens.
+Um Pedido pode ter vários Itens, com a quantidade de cada item. Essa relação é representada pela classe associativa PedidoItem.
+Um Pedido pode ser realizado por um Cliente.
+Cada Pedido tem um ou mais Pagamentos.
+
+Exercício 5: Sistema de Cadastro de Cursos em uma Universidade
+
+Desenvolva um diagrama de classe para um sistema de cadastro de cursos em uma universidade. Considere as seguintes informações:
+A universidade possui vários cursos, cada curso tem um nome e um código.
+Um curso pode ter vários alunos matriculados.
+Cada aluno tem um nome, matrícula e data de nascimento.
+Cada curso tem um professor responsável, e o professor tem nome e matrícula.
+O aluno pode realizar várias disciplinas durante o curso, e cada disciplina possui um nome e carga horária.
+A considerar:
+Uma Universidade tem vários Cursos.
+Um Curso tem vários Alunos, por meio de uma relação de matrícula.
+Cada Curso tem um Professor responsável.
+Um Curso tem várias Disciplinas.
+Um Aluno pode estar matriculado em várias Disciplinas.
