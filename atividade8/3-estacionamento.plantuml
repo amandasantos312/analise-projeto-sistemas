@@ -2,8 +2,11 @@
 
 class Estacionamento {
     + id: Integer
-    + nome: String
+    + endereco: String
     + capacidade_max: Integer
+
+    + get_id(): Integer
+    + get_capacidade_max(): Integer
 }
 
 class Vaga {
